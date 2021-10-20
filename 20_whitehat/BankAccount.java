@@ -1,8 +1,5 @@
-/** "The Cats" : Faiyaz Rafee, Xinqing Lin, Perry "the platypus" Huang APCS pd07 HW19 -- Mo
-   Money Mo Problemos.., More AWESOME 2021-10-18 DISCO: *You can convert int to short by
-   putting method((short)****) QCC: *How does DISCO work and does it work with other
-   primitives?
-**/ public class BankAccount {
+
+  public class BankAccount {
   //instance variables
   private String name; private String passwd; private short pin; private int acctNum; private
   double balance;
