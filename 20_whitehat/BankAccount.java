@@ -53,10 +53,10 @@
     retStr;
   }
   //main method for testing
-  public static void main( String[] args ) { BankAccount cats = new BankAccount();
+/*  public static void main( String[] args ) { BankAccount cats = new BankAccount();
 	cats.setName("Dr.Doofenshmirtz"); cats.setPasswd("FaiyazXinqingPerry");
 	cats.setPin((short)89703); cats.setAcctNum(1010000000); cats.setBalance(2138);
 	cats.deposit(1000000); cats.withdraw(99990000); System.out.println(cats.toString());
 	System.out.println(cats.authenticate(100000000, "FaiyazXinqingPerry"));
-  }//end main()
+}//end main()*/
 }//end class BankAccount
