@@ -32,14 +32,15 @@ public class Driver {
 
       //test flip() method
       System.out.println("\nAfter flipping...");
-      yours.upFace=yours.flip();
-      wayne.upFace=wayne.flip();
+      yours.upFace=yours.flip(5,2);
+      wayne.upFace=wayne.flip(5,2);
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
 
       //test equals() method
       if ( yours.equals(wayne) ) {
         System.out.println( "\nMatchee matchee!" );
+	yours.matchCtr+=1;
       }
       else {
         System.out.println( "\nNo match. Firestarter you can not be." );

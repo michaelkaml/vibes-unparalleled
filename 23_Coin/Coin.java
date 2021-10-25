@@ -26,6 +26,7 @@ public class Coin {
   public int headsCtr;
   public int tailsCtr;
   public double bias;
+  public int matchCtr;
 
   /***
    *  Coin() -- default constuctor
@@ -33,7 +34,7 @@ public class Coin {
    *  postcond:
    ***/
   public Coin() {
-    upFace = "heads";
+    reset( "heads", 0.5);
   }
 
 
@@ -49,8 +50,9 @@ public class Coin {
       postcond:
   ***/
   public Coin( String s ) {
-    name=s;
-    upFace="heads";
+	this();
+	name=s;
+	assignValue(s);
   }
 
 
@@ -60,7 +62,7 @@ public class Coin {
       postcond:
   ***/
   public Coin( String s, String nowFace ) {
-    name=s;
+    this(s);
     upFace=nowFace;
   }
 
@@ -117,8 +119,12 @@ public class Coin {
       postcond: Coin's attribs reset to starting vals
   ***/
   public void reset( String s, double d ) {
-    upFace=s;
-    bias=d;
+	flipCtr = 0;
+	headsCtr = 0;
+	tailsCtr = 0;
+	upFace=s;
+	bias=d;
+	matchCtr=0;
   }
 
 
@@ -131,17 +137,20 @@ public class Coin {
    * Either headsCtr or tailsCtr incremented by 1, as approp.
    * Returns "heads" or "tails"
    ***/
-  public String flip() {
+  public String flip(int x, int y) {
     bias=.5;
     double result = Math.random();
-    if (result>=bias) {
+	while (matchCtr < x) {
+   	if (result>=bias) {
       upFace="tails";
       tailsCtr+=1;
     } else {
       upFace="heads";
       headsCtr+=1;
     }
+
     flipCtr+=1;
+	}
     return upFace;
   }
 
