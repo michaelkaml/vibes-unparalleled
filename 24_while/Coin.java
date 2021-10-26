@@ -137,10 +137,9 @@ public class Coin {
    * Either headsCtr or tailsCtr incremented by 1, as approp.
    * Returns "heads" or "tails"
    ***/
-  public String flip(int x, int y) {
+  public String flip() {
     bias=.5;
     double result = Math.random();
-	while (matchCtr < x) {
    	if (result>=bias) {
       upFace="tails";
       tailsCtr+=1;
@@ -148,9 +147,7 @@ public class Coin {
       upFace="heads";
       headsCtr+=1;
     }
-
     flipCtr+=1;
-	}
     return upFace;
   }
 
