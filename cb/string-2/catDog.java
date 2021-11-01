@@ -8,6 +8,10 @@ time spent: an excessive amount
 
 String-2 catDog
 Return true if the string "cat" and "dog" appear the same number of times in the given string.
+
+DISCO:
+str.substring(a,b) takes the subset of a string starting at position a (inclusive) and ending at position b (exclusive)
+previously I used str.substring(a) to try and take the value at just one position, but now I actually know how to use it
 */
 
 public boolean catDog(String str) {
