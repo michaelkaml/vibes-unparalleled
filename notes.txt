@@ -1,0 +1,35 @@
+Debugging Notes
+
+3 types of errors:
+1) Compile-time Errors
+  - indicate that something is wrong with the syntax
+  - incremental development
+  - fix the first error, it's the only truly reliable error message
+  - read carefully
+  - error not always at the location given by the compiler
+    - e.g. in a method invocation, the error may actually be in the method definition
+  - common causes of compile-time errors:
+    1) parentheses and brackets
+    2) capitalization
+    3) semicolon placement
+    4) quotation marks 
+    5) assignment statements
+    6) arguments in method invocation
+    7) using results of value methods vs. void methods
+    8) invoke instance methods on the wrong type of object
+    9) static methods cannot refer to instance variables without specifying an object
+  - debug by bisection: make a copy and cut out half your code until you identify the error
+  
+2) Run-time Errors
+  - could be caught in infinite loop or recursion
+    - loop remedy: add return statements before and after the loop, and print the variables used in the loop to figure out why it's hanging
+    - recursion remedy: make sure there is a base case and your parameters are moving towards it
+  - simplify output: scale down, clean up your code
+  
+3) Logic Errors
+  - hard to find
+  - develop a hypothesis (is your code not doing something? is it doing something it shouldn't?)
+  - test components independently of each other
+  - complex expressions cause trouble
+  - step AWAY from the computer
+  - ask for help if you still don't get it
