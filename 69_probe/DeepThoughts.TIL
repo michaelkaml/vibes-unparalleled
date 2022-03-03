@@ -1,0 +1,26 @@
+1.
+	q0. By counterexample, we have concluded that a knight's tour
+	cannot be found from a position adjacent to a corner in a 5x5 grid,
+	in which the puzzle can be solved starting from a corner.
+
+	q1. If we can't find an open tour for any position in a solveable
+	board, we definitely can't find a closed one.
+
+	q2. The increase in execution time in a solveable case will vary
+	depending on where the solution lies in our tree of possible tours.
+	In the worst case, when there is no possible tour, the timeframe seems
+	to be beyond exponential.
+
+	q3. For an optimization, I would suggest checking to see if there are
+	any empty corners that are impossible to reach, and ending the probe
+	there, as this appeared pretty often throughout our trials.
+
+2.
+	0. Set every space in the maze to 0 and every wall to -1.
+	1. Set the goal to -2
+	2. Start by occupying the first space in the maze with a 1
+	3. For each unoccupied adjacent space, fill it with a 2
+	4. Store the locations of the 2's as they are placed.
+	5. For each unoccupied space adjacent to a 2 with a value of 0,
+	fill it with a 3.
+	6. Repeat the process until one of the adjacent cells probed is a -2 
