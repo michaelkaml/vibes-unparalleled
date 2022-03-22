@@ -1,0 +1,20 @@
+BAR Mitzvah:: Ameer Alnasser, ben Belotser, Ryan Lau, Michael Kamela\
+Ben Belotser
+APCSpd6
+HW60:A Termite is-a Turtle, a Thinker is-a Turtle 
+
+DISCO:
+
+* All thinkeren were moving in random patterns, making the sorting mechanism inefficient and inaccurate.
+* Sometimes, thinkeren were given too many or too few cards.
+* For example, I was given three cards, which left me wondering how to give them to the other thinkeren.
+
+QCC: 
+
+* Can we program simulations in java as we can in netlogo?
+* Why do termites in netlogo follow random patterns?
+
+THINKER FIRMWARE:
+
+If cards in hand, find turtle with hand raised, then give card to turtle. Once all cards are given, go to starting point, and position hands upward.
+If cards not in hand at start of operation, raise hand and wait for a turtle to give you cards. Once cards in hand, follow line 19.
