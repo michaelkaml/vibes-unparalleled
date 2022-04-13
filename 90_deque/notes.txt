@@ -1,0 +1,16 @@
+Blonde Himbos: Hugo Jenkins + Boary, Micheal Kamela, Jun Hong Wang
+APCS pd6
+HW90 - Deque
+2022-04-11m
+time spent:  hr
+
+DISCO:
+While looking through the Java API for Deque, we noticed that many of the methods included in Dequeue were very similar to the ones in LinkedList.
+After further investigation, we found that LinkedList implements List and Deque, and therefore inherits some methods from both interfaces.
+
+QCC:
+We decided to use LinkedList because it seems like it would be easier to implement.
+Before coding, we thought that Deque looked a lot like a doubly LinkedList.
+(later confirmed by looking at Java API)
+
+We felt that our implementation of this using LL was too easy because everything Deques do, LLs do. 
