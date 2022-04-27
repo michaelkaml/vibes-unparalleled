@@ -1,0 +1,52 @@
+Big Bird:
+APCS pd6
+Lab09: Some Folks Call It A Charades
+2022-04-26
+time spent:
+
+Activity 1:
+1) A celebrity class, game class, (hat class)
+2) points, array(list) of celebrities
+3) play game, update score, choose next celebrity, add/remove celebrity, checking if clue valid, check guess correctness
+4) we think all of these can be put into methods because they all work with the instance variables we plan to have
+5) play method should have a way to add celebrity names at the beginning
+start game
+start timer
+in loop until timer stops?
+  choose next celebrity
+  reader: give clue
+  guesser: take input for guesses
+  check correctness
+    if correct, discard celebrity
+    update score
+return score
+end game
+6) using a combination lock as an example for a real-world object, the information it has could be the correct code as well as user input
+behaviors could be checking if numbers are correct, and unlocking/locking
+7) skip?
+
+Activity 2:
+1) to create new instance of that object, initialize instance vars
+2) public ClassName(optional parameters) {}
+3) String name
+depending on if game is multiplayer, String clue might exist
+(upon looking at code, we noticed that clue is built in, and the clue is inputted in constructor)
+4) accessor methods for name and clue
+constructor with name and clue as parameters
+5) completed class
+6) made test cases
+7) we only have a single constructor, but an additional constructor could be
+public Celebrity() {}
+which just declares the variables name and clue to a default value instead of user inputted values
+
+Activity 3:
+1) we chose the JComponent class
+if cursor is paused over a component, a string is displayed in a small window near the component
+when a key is pressed, the component will react
+the setBorder method can change the look of the component
+the setLookAndFeel method under UIManager can change the look and feel
+2) private ArrayList<Celebrity> celebGameList;
+3) the visibility of gameCelebrity should match that of celebGameList, as instance variables should be private (preferred)
+4) in file
+5) in file
+6) 
