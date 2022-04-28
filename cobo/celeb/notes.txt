@@ -1,8 +1,21 @@
-Big Bird:
+Big Bird: Jun Hong Wang, Raven (Ruiwen) Tang, Michael Kamela
 APCS pd6
-Lab09: Some Folks Call It A Charades
-2022-04-26
-time spent:
+L09: Some Folks Call It A Charades / working through the College Board Celebrity lab
+2022-04-27
+time spent: 3.0 hrs
+
+DISCO:
+* A "hat" object isn't necessarily needed since the hat could just be an array(list).
+* A foundational/default Celebrity is established before developing subclasses.
+* GUI functionality is best left towards the end. It's okay to slot it down the to do list if implementation feels unrealistic or confusing. It may be more productive to work on other aspects, like the actual logic of the program, first. However, GUI functionality is still important to test.
+* It can be helpful to try compiling and executing files on different computers. When we originally attempted to run CelebrityRunner, Jun Hong's computer showed no windows opening up, while Raven's computer made a brief attempt to open an application, after which the application icon disappeared.
+
+QCC:
+* As long as a clue doesn't mention the celebrity's name, it's valid?
+* Is there a length limit on a clue?
+* ~~How will we make the game have a reader and a guesser? Pass and play?~~
+  * The "reader" will input a celebrity using a constructor with both the name and the clue at the beginning. Then the guesser will play the game.
+* We noticed that when we compile CelebrityPanel, we get multiple class files. There's CelebrityPanel, as well as four other classes (CelebrityPanel$1-4). We think these come from the nested methods inside of the class.
 
 Activity 1:
 1) A celebrity class, game class, (hat class)
@@ -49,4 +62,3 @@ the setLookAndFeel method under UIManager can change the look and feel
 3) the visibility of gameCelebrity should match that of celebGameList, as instance variables should be private (preferred)
 4) in file
 5) in file
-6) 

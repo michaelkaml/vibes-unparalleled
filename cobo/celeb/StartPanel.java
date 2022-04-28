@@ -1,3 +1,9 @@
+// Big Bird: Jun Hong Wang, Raven (Ruiwen) Tang, Michael Kamela
+// APCS pd6
+// L09: Some Folks Call It A Charades / working through the College Board Celebrity lab
+// 2022-04-27
+// time spent: 3.0 hrs
+
 package celeb;
 
 import java.awt.Color;
@@ -49,6 +55,8 @@ public class StartPanel extends JPanel
   /**
    * Customize the JRadioButton for the class created sub class
    */
+
+   private JRadioButton actorRadio;
 
   /**
    * Label to guide the user to what should be inputted.
@@ -121,6 +129,7 @@ public class StartPanel extends JPanel
     this.typeGroup = new ButtonGroup();
     this.celebrityRadio = new JRadioButton("Celebrity");
     this.literatureRadio = new JRadioButton("Literature Celebrity");
+    this.actorRadio = new JRadioButton("Actor Radio");
     this.celebrityClue = "Enter the clue for the celebrity";
     this.literatureClue = "Enter the clues for the literature celeb separated by commas";
     this.clueLabel = new JLabel(celebrityClue);
@@ -179,6 +188,17 @@ public class StartPanel extends JPanel
   private void setupPanel()
   {
     // Adds the RadioButtons to the group so only one can be selected.
+    this.add(clueLabel, panelLayout);
+    this.add(celebrityCountLabel, panelLayout);
+    this.add(answerField, panelLayout);
+    this.add(clueField, panelLayout);
+    this.add(addCelebrityButton, panelLayout);
+    this.add(startButton, panelLayout);
+
+    //not sure how to switch between buttons
+    this.add(celebrityRadio, panelLayout);
+    this.add(literatureRadio, panelLayout);
+    this.add(actorRadio, panelLayout);
   }
 
   /**

@@ -1,3 +1,9 @@
+// Big Bird: Jun Hong Wang, Raven (Ruiwen) Tang, Michael Kamela
+// APCS pd6
+// L09: Some Folks Call It A Charades / working through the College Board Celebrity lab
+// 2022-04-27
+// time spent: 3.0 hrs
+
 package celeb;
 
 import java.awt.CardLayout;
@@ -43,7 +49,11 @@ public class CelebrityFrame extends JFrame
 	{
 		//The first line of any subclass should ALWAYS be a correct call to the super constructor.
 		super();
-
+		controller = controllerRef;
+		panelCards = new JPanel(new CardLayout());
+		gamePanel = new CelebrityPanel(controller);
+		startPanel = new StartPanel(controller);
+		setupFrame();
 	}
 
 	/**
@@ -51,7 +61,15 @@ public class CelebrityFrame extends JFrame
 	 */
 	private void setupFrame()
 	{
-
+		panelCards.add(gamePanel, "GAME");
+		panelCards.add(startPanel, "START");
+		this.setSize(800, 800);
+		this.setTitle("Celebrity Game");
+		this.add(panelCards);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
+		replaceScreen("START");
+		this.setVisible(true);
 	}
 
 	/**
@@ -60,7 +78,10 @@ public class CelebrityFrame extends JFrame
 	 */
 	public void replaceScreen(String screen)
 	{
-
+		if (screen.equals("GAME")){
+			gamePanel.addClue(controller.sendClue());
+		}
+		((CardLayout)panelCards.getLayout()).show(panelCards, screen);
 	}
 
 }
