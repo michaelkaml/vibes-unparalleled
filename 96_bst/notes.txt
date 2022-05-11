@@ -1,0 +1,18 @@
+Big Bird :: Raven (Ruiwen) Tang, Jun Hong Wang, Michael Kamela
+APCS pd6
+HW96 -- BSTs is the Perfect Place for Shade
+2022-05-10t
+time spent: 0.8 hrs
+
+DISCO:
+We believe that the runtime of our search algorithm is O(logn).
+This is because when we search for a value, we disregard roughly half (or at least the rest) of the tree.
+Each step recursively does this, so we think this results in a logn runtime.
+
+QCC:
+What is the runtime of this search algorithm? (possibly answered in DISCO)
+What is the use of numLeaves()?
+Can BSTs only store integers (or numbers in general)? If not, how would a BST work?
+
+(maybe getting ahead of ourselves)
+How would we remove nodes?

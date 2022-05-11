@@ -1,0 +1,19 @@
+Big Bird :: Raven (Ruiwen) Tang, Jun Hong Wang, Michael Kamela
+APCS pd6
+HW95 -- Algorithm as Data Structure
+2022-05-06m
+time spent: 1.0 hrs
+
+DISCO:
+All of the traversals we learned have the same three steps, but arranged in a different order.
+They all have: process node, recurse left, recurse right.
+
+QCC:
+Is there a simpler way to express the code for insertion?
+What are the uses of binary search trees, and what is it best used for?
+Are there any traversals that don't use those 3 steps?
+
+L = level, d = depth, h = height
+1) A perfect binary tree has 2^L-1 nodes.
+2) At each level, a perfect binary tree has 2^d nodes.
+3) Height of a complete binary tree with n nodes is sqrt(n) rounded up to nearest whole number.

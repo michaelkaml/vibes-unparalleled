@@ -1,0 +1,111 @@
+Big Bird :: Raven (Ruiwen) Tang, Jun Hong Wang, Michael Kamela
+APCS pd6
+HW94 -- reverse engineering
+2022-05-06f
+time spent: 0.9 hrs
+
+
+DISCO
+------------------------------------------------
+* The only tree where pre, post, and in order traversals are the same are trees with 0 or 1 nodes.
+* Every tree can be described by a traversal, and every traversal can be described by a set of trees.
+* Adding onto the previous point, traversals and trees are not one-to-one.
+================================================
+
+
+QCC
+------------------------------------------------
+* Knowing that two nodes are adjacent in a traversal doesn't tell us that they're directly related, like if one is a parent of another.
+* When making the algorithm for post and pre-order reconstruction, we don't have in-order to give us information about the left and right subtree.
+* Due to this, there's a lot more ambiguity in the algorithm.
+* Ex: AB.. (pre-order)
+      ..BA (post-order)
+* A is definitely the root, but B could be either the left or right child of A.
+
+* Could the number of trees possible from one traversal be written as some number to the power of number of nodes?
+* Is there even an explicit formula that tells us this?
+* If we get two different traversals, can we tell if one has more possible trees?
+* What does map mean? Does it imply one element can be connected to only one element?
+================================================
+
+
+HOW KEEN ARE YOUR POWERS OF OBSERVATION?
+------------------------------------------------
+Q: For a given binary tree, how many unique pre-order traversals are there?
+A: Assuming that direction matters in the traversal type (left before right or right before left), then there should only be one unique traversal.
+
+Q: For a given binary tree, how many unique in-order traversals are there?
+A: One unique traversal.
+
+Q: For a given binary tree, how many unique post-order traversals are there?
+A: One unique traversal.
+
+Q: For a given traversal, how many unique trees could have produced it?
+A: Not sure, but definitely more than one
+
+Q: Given a pre-order traversal, what can you infer about its tree?
+A: We know that the first node in the traversal is the root, and the last one is the bottom of the rightmost branch.
+The second node can be the left child of the root, assuming that the root has a left child.
+We can't determine the exact tree given a pre-order traversal.
+
+Q: Given a post-order traversal, what can you infer about its tree?
+A: The last node is the root, and the first node is the bottom of the leftmost branch.
+
+Q: What does "1-to-1" mean?
+A: Between two sets x and y, every element of x maps to a unique element of y.
+
+Q: What does "onto" mean?
+A: Between two sets x and y, every element of y maps to at least one element of x.
+
+================================================
+
+Tree given traversal
+ALGO for reconstructing tree given pre-order and in-order traversals
+------------------------------------------------
+givens: pre-order and in-order traversal
+We know the root and bottom of the rightmost branch from pre-order.
+We also know about the bottom of the leftmost branch from in-order.
+
+procedure:
+First node in pre-order must be the root.
+Using this node identified as the root, everything left of it in the in-order must be in the left subtree, and everything right of it must be in the right subtree.
+If there are nodes to both sides of the root node in in-order, then it has children on both sides.
+If there is a left subtree, then the second node in pre-order must be the left child of the root, otherwise, it is the right child of the root.
+This node will become the new "root".
+
+Repeat the process with this new "root" in in-order, partition into left and right subtrees,
+move onto next node in preorder, determine if it's the left or right child of the new "root" using the partition,
+make this node new root, repeat until end of traversals
+
+================================================
+
+ALGO for reconstructing tree given post-order and in-order traversals
+------------------------------------------------
+givens: post-order and in-order traversals
+We know the bottom of the leftmost branch from in-order.
+We also know about the root and the bottom of the leftmost branch from post-order.
+
+procedure:
+The last node in post-order must be the root.
+Using this node identified as the root, everything to the left of it in in-order must be in its left subtree, and everything to the right of it must be in the right subtree.
+If there are nodes to both sides of the root node in in-order, then it has children on both sides.
+If there is a right subtree, then the second-to-last node in post-order must be the right child of the root.
+Otherwise, it's the left child.
+
+Repeat the process with this new "root" in in-order, partition into left and right subtrees,
+move onto next node in preorder, determine if it's the left or right child of the new "root" using the partition,
+make this node new root, repeat until beginning of post-order traversal reached
+
+================================================
+
+incomplete algorithm
+ALGO for reconstructing tree given post-order and pre-order
+------------------------------------------------
+givens: post-order and pre-order traversals
+We know the bottoms of both the leftmost and rightmost branches.
+We also know the root.
+
+procedure:
+
+================================================
+(replicate the algo section above as many times as necessary for distinct algos)
