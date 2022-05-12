@@ -1,0 +1,19 @@
+Big Bird :: Raven (Ruiwen) Tang, Jun Hong Wang, Michael Kamela
+APCS pd6
+HW97 -- Prune Your Tree
+2022-05-11w
+time spent: 0.8 hrs
+
+DISCO:
+It could be helpful to save the cargo of the next greatest node instead of the node itself, so that children don't need to be disconnected.
+It's helpful to have a follower and searcher pointer, but we had to be careful when we want to remove the root, since follower is null.
+
+QCC:
+Is there a better way to search for the next greatest node without using two temp variables?
+How would we have done this recursively? (and is there a difference in complexity?)
+
+Removing nodes with 2 children results in a lot more complexity than cases with 1 child or no children.
+This is because nodes with no children can be easily removed by pointing to null.
+Removal of nodes with 1 child is like removal in a linkedlist, which is just pointing the parent to the next node.
+However, removing nodes with 2 children results in having to traverse the tree to find the next greatest node, then replacing the removed one with that node, which adds complexity.
+Also, the next greatest node might have left children.
