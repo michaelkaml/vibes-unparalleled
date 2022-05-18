@@ -1,0 +1,15 @@
+Big Bird :: Raven (Ruiwen) Tang, Jun Hong Wang, Michael Kamela
+APCS pd6
+HW101 -- Heap o'Trouble
+2022-05-16m
+time spent: 0.7 hrs
+
+ALGO:
+1) If the heap is empty, then make the root the new element.
+2) If the item we want to insert is less than the root, then we make that item the new root, and make the old root the new left child.
+If the item we want to insert is greater than the root, we find the first available space for it by going through the left subtree, then the right subtree.
+Once we reach the first node that is greater than the element we want to insert, we go back to its parent. (requires follower and searcher)
+If whole tree traversed (searcher is null), go back to parent, make new element child of parent.
+3) If the node above the spot where we want to insert is a leaf, then we can make the new element the child.
+If it has 1 child, then we make the new element the other child.
+If the node above has 2 children, we have to detach one of the subtrees (left one for simplification), make the new element the child, and make the detached subtree the child of the new element.

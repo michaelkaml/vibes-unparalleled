@@ -1,0 +1,16 @@
+Big Bird :: Raven (Ruiwen) Tang, Jun Hong Wang, Michael Kamela
+APCS pd6
+HW101 -- Heap o'Trouble
+2022-05-16m
+time spent: 0.7 hrs
+
+ALGO:
+We are using the piggybacking nodes, with a searcher and follower.
+1) Traverse to the item we want to remove. (like in pre-order traversal, checking each node)
+If we reach a node that is greater than the element we are looking for, then we go back, since we know that the element won't be there.
+2) Find how many children it has.
+3) If no children, then point the parent of that node to null.
+If 1 child, point parent of that node to node's child. (promote child)
+If 2 children?
+Promote one child, then reorder the entire subheap of the other child to maintain invariant.
+(redistribute the nodes from the other subtree, possibly using the insertion algorithm)

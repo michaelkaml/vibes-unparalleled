@@ -1,0 +1,20 @@
+Big Bird :: Raven (Ruiwen) Tang, Jun Hong Wang, Michael Kamela
+APCS pd6
+HW99 -- Some Are More Equal Than Others, Codified
+2022-05-15m
+time spent: 0.8 hrs
+
+DISCO:
+The add method is a pass-through method, since it uses the add method of AL.
+A priority queue can't be described cleanly with a short description like FIFO or LIFO, etc.
+
+QCC:
+How would we do remove min for Objects in general?
+We think it would only work for Comparables, since we would have to use the compareTo() method.
+
+Why did we return ints, not Integers?
+
+The API was useful for telling us what exception to throw if the queue was empty. (runtime exception)
+
+The difference between a human implementation of a priority queue and a computer implementation of a priority queue is that a human would have to keep everything in order based on priority as new elements are added and removed.
+A computer doesn't need to do that, since it doesn't necessarily need to keep things in order, since it can traverse and look for the next element.

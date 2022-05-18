@@ -1,0 +1,21 @@
+Big Bird :: Raven (Ruiwen) Tang, Jun Hong Wang, Michael Kamela
+APCS pd6
+HW101 -- Heap o'Trouble
+2022-05-16m
+time spent: 0.7 hrs
+
+DISCO:
+Searching in a heap is efficient, since we can quickly eliminate subheaps.
+(there's only a few areas where an element can exist due to the invariant imposed on the tree)
+Removal of a node with 2 children is a problem, since the children might also have 2 children each, and something has to be promoted, but can have at most 2 children.
+
+QCC:
+How do we know what node to promote when removing?
+We think that we have to somehow reorder the heap to maintain the invariant, but how do we do this efficiently?
+
+The best idea we have right now is promoting the smaller child, then reordering the children in the entire subtree.
+
+For simplicity and consistency, we decided that we would shift elements to the left in insert.
+We decided that we would traverse the heap like pre-order traversal. (not really pre-order, but left first, then right)
+
+Insertion is a lot easier than removal, since there are so many more cases for removal.
